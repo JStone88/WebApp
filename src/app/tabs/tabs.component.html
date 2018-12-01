@@ -1,0 +1,14 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" [ngClass]="{active: chosenList === 'qb'}">
+      <a (click)="onChoose('all')" style="cursor: pointer">QB</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenList === 'keep'}">
+      <a (click)="onChoose('keep')" style="cursor: pointer">Keep</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenList === 'sit'}">
+      <a (click)="onChoose('sit')" style="cursor: pointer">Sit</a>
+    </li>
+  </ul>
+  <app-list [players]="getPlayers()"></app-list>
+</div>
