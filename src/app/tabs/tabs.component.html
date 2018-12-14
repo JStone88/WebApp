@@ -1,14 +1,14 @@
 <div>
   <ul class="nav nav-tabs">
-    <li role="presentation" [ngClass]="{active: chosenList === 'qb'}">
-      <a (click)="onChoose('all')" style="cursor: pointer">QB</a>
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/players/all">QB &nbsp;&nbsp;</a>
     </li>
-    <li role="presentation" [ngClass]="{active: chosenList === 'keep'}">
-      <a (click)="onChoose('keep')" style="cursor: pointer">Keep</a>
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/players/keep">Keep&nbsp;&nbsp;</a>
     </li>
-    <li role="presentation" [ngClass]="{active: chosenList === 'sit'}">
-      <a (click)="onChoose('sit')" style="cursor: pointer">Sit</a>
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/players/sit">Sit</a>
     </li>
   </ul>
-  <app-list [players]="getPlayers()"></app-list>
+  <router-outlet></router-outlet>
 </div>

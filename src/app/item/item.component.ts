@@ -18,9 +18,7 @@ export class ItemComponent implements OnInit {
   }
 
   onAssign(side) {
-
-    // this.sideAssigned.emit({name: this.player.name, side: side});
-    this.plService.onSideChosen({name: this.player.name, side: side});
+    this.plService.onSideChosen({name: this.player.name, team: this.player.team, side: side});
   }
 
 }
